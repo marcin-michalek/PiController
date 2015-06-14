@@ -1,11 +1,10 @@
 /**
  * Created by Marcin Michałek on 2015-02-10.
- *
  */
 package pl.michalek.marcin.picontroller.config;
 
 /**
- * TODO Add class description...
+ * Contains constants
  *
  * @author Marcin Michałek
  */
