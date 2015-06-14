@@ -5,7 +5,7 @@
 package pl.michalek.marcin.picontroller.network.request;
 
 import com.octo.android.robospice.request.springandroid.SpringAndroidSpiceRequest;
-import pl.michalek.marcin.picontroller.network.NoRetryPolicy;
+import pl.michalek.marcin.picontroller.network.TenTimesLongDelay;
 import pl.michalek.marcin.picontroller.network.ServicePaths;
 
 /**
@@ -17,7 +17,7 @@ public class LightsOffRequest extends SpringAndroidSpiceRequest<String> {
 
   public LightsOffRequest() {
     super(String.class);
-    setRetryPolicy(new NoRetryPolicy());
+    setRetryPolicy(new TenTimesLongDelay());
   }
 
   @Override

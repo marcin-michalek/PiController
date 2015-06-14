@@ -5,7 +5,7 @@
 package pl.michalek.marcin.picontroller.network.request;
 
 import com.octo.android.robospice.request.springandroid.SpringAndroidSpiceRequest;
-import pl.michalek.marcin.picontroller.network.NoRetryPolicy;
+import pl.michalek.marcin.picontroller.network.TenTimesLongDelay;
 import pl.michalek.marcin.picontroller.network.ServicePaths;
 import pl.michalek.marcin.picontroller.network.reponse.BaseResponse;
 
@@ -18,7 +18,7 @@ public class ToggleLightsRequest extends SpringAndroidSpiceRequest<BaseResponse>
 
   public ToggleLightsRequest() {
     super(BaseResponse.class);
-    setRetryPolicy(new NoRetryPolicy());
+    setRetryPolicy(new TenTimesLongDelay());
   }
 
   @Override

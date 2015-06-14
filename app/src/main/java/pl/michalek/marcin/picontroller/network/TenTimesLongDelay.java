@@ -14,10 +14,10 @@ import pl.michalek.marcin.picontroller.config.Constants;
  *
  * @author Marcin Michałek
  */
-public class NoRetryPolicy implements RetryPolicy {
+public class TenTimesLongDelay implements RetryPolicy {
   @Override
   public int getRetryCount() {
-    return 0;
+    return 10;
   }
 
   @Override
@@ -27,6 +27,6 @@ public class NoRetryPolicy implements RetryPolicy {
 
   @Override
   public long getDelayBeforeRetry() {
-    return 0;
+    return 10000;
   }
 }

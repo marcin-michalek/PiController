@@ -6,8 +6,8 @@ package pl.michalek.marcin.picontroller.activity;
 
 import android.app.ProgressDialog;
 import android.support.v7.app.AppCompatActivity;
-import com.octo.android.robospice.GsonSpringAndroidSpiceService;
 import com.octo.android.robospice.SpiceManager;
+import pl.michalek.marcin.picontroller.service.SpiceService;
 
 /**
  * TODO Add class description...
@@ -19,7 +19,7 @@ public class BaseRestActivity extends AppCompatActivity {
     return spiceManager;
   }
 
-  protected SpiceManager spiceManager = new SpiceManager(GsonSpringAndroidSpiceService.class);
+  protected SpiceManager spiceManager = new SpiceManager(SpiceService.class);
   protected ProgressDialog progressDialog;
 
   @Override

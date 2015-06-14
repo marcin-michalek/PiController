@@ -3,7 +3,6 @@ package pl.michalek.marcin.picontroller.service;
 import android.app.IntentService;
 import android.content.Intent;
 import android.util.Log;
-import com.octo.android.robospice.GsonSpringAndroidSpiceService;
 import com.octo.android.robospice.SpiceManager;
 import com.octo.android.robospice.persistence.exception.SpiceException;
 import com.octo.android.robospice.request.listener.RequestListener;
@@ -18,7 +17,7 @@ import pl.michalek.marcin.picontroller.widget.PiControllerWidgetProvider;
  * File belongs to project SendIt!
  */
 public class BackgroundNetworkingService extends IntentService {
-  private SpiceManager spiceManager = new SpiceManager(GsonSpringAndroidSpiceService.class);
+  private SpiceManager spiceManager = new SpiceManager(SpiceService.class);
 
   public BackgroundNetworkingService() {
     super(BackgroundNetworkingService.class.getSimpleName());

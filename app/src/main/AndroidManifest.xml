@@ -21,7 +21,7 @@
         </receiver>
 
         <service
-            android:name="com.octo.android.robospice.GsonSpringAndroidSpiceService"
+            android:name=".service.SpiceService"
             android:exported="false" />
 
         <service
